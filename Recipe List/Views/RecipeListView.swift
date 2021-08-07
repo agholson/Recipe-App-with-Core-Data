@@ -9,11 +9,11 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    // Reference the view model
-    @ObservedObject var model = RecipeModel()
+    // MARK: Read the Environment Object
+    @EnvironmentObject var model:RecipeModel
     
     var body: some View {
-        
+       
         VStack {
             
             NavigationView {
