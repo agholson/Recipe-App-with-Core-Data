@@ -37,7 +37,7 @@ class RecipeModel: ObservableObject {
             denominator /= divisor
             
             // Get the whole portion if numerator > denominator
-            if numerator > denominator {
+            if numerator >= denominator {
                 
                 // Calculated the whole portions
                 wholePortions = numerator / denominator // 5/2 = 2
@@ -57,6 +57,32 @@ class RecipeModel: ObservableObject {
                 portion += "\(numerator)/\(denominator)"
             }
             
+        }
+        
+        
+        if var unit = ingredient.unit {
+            
+            var suffix = ""
+            
+            // If whole portions greater than one, then we need it plural
+            if wholePortions > 1 {
+                
+                // Calculate appropriate suffix
+                if unit.suffix(2) == "ch" { // See if the last two characters are ch
+                    unit += "es"
+                }
+                else if unit.suffix(1) == "f" { // ends in f like leaf
+                    unit = String(unit.dropLast()) + "ves"
+                }
+                else {
+                    unit += "s"
+                }
+            }
+            
+            
+            portion += ingredient.num == nil && ingredient.denom == nil ? "" : " " // If there's no fraction, then no space
+            
+            return portion + unit
         }
         
         return portion
