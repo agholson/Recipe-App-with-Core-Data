@@ -23,7 +23,7 @@ struct RecipeListView: View {
                     // Title
                     Text("All recipes")
                         .fontWeight(.bold)
-                        .font(.largeTitle)
+                        .font(Font.custom("Avenir Heavy", size: 24))
                     
                     // Use a ScrollView to allow for the nice scrolling interfaces
                     ScrollView {
@@ -46,7 +46,7 @@ struct RecipeListView: View {
                                             // MARK: Recipe Name + Highlights
                                             VStack(alignment: .leading) {
                                                 Text(r.name)
-                                                    .bold()
+                                                    .font(Font.custom("Avenir Heavy", size: 16))
                                                 // Add highlights
                                                 RecipeHighlights(highlights: r.highlights)
                                             }

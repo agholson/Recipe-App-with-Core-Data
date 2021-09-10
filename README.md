@@ -9,4 +9,5 @@ The app incorporates the following concepts:
 - List
 - Reads the recipes in the data folder, and builds the app around that.
 
-
+## Add Custom Font
+Follow this guide to add a custom font to your application: https://www.simpleswiftguide.com/how-to-use-custom-fonts-in-swift-ios-app-using-swiftui/.

@@ -18,11 +18,12 @@ struct RecipeFeaturedView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             
+            // MARK: Custom Font Title
             Text("Featured Recipes")
                 .fontWeight(.bold)
                 .padding(.leading)
                 .padding(.top)
-                .font(.largeTitle)
+                .font(Font.custom("Avenir Heavy", size: 24))
                 
             // Use TabView to display a card with the food
             GeometryReader { geo in
@@ -48,7 +49,7 @@ struct RecipeFeaturedView: View {
                                     Rectangle()
                                         .foregroundColor(.white)
                                     
-                                    // Image
+                                    // MARK: Image + Name
                                     VStack(spacing: 0) {
                                         Image(model.recipes[index].image)
                                             .resizable()
@@ -56,6 +57,7 @@ struct RecipeFeaturedView: View {
                                             .clipped()
                                         Text(model.recipes[index].name)
                                             .padding(5)
+                                            .font(Font.custom("Avenir", size: 15))
                                     }
                                 }
                             })
@@ -81,12 +83,11 @@ struct RecipeFeaturedView: View {
         // MARK: Bottom Text
         VStack(alignment: .leading, spacing: 5) {
             Text("Preparation Time: ")
-                .font(.headline)
+                .font(Font.custom("Avenir Heavy", size: 16))
             Text(model.recipes[tabSelectionIndex].prepTime)
             Text("Highlights:")
-                .font(.headline)
+                .font(Font.custom("Avenir Heavy", size: 16))
             RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
-//            Text(model.recipes[tabSelectionIndex].highlights)
                 
         }
         .padding([.leading, .bottom])
