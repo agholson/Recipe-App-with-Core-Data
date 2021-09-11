@@ -4,6 +4,11 @@ from the iOS Foundations module 2 course through lesson 14.
 
 https://learn.codewithchris.com/courses/take/foundations/texts/20330438-lesson-14-challenge
 
+![App screenshot 1](img/app1.png)
+![App screenshot 2](img/app2.png)
+
+![Video of app](appVideo.mov)
+
 # Swift Concepts
 The app incorporates the following concepts:
 - List
