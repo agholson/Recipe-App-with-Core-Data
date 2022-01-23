@@ -9,11 +9,14 @@ import SwiftUI
 
 struct RecipeFeaturedView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
     // Inherit the RecipeModel from a higher-level view
     @EnvironmentObject var model: RecipeModel
     
     @State var isDetailViewShowing = false // Tracks whether/ not to show our detailed view
     @State var tabSelectionIndex = 0
+    
         
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -51,7 +54,10 @@ struct RecipeFeaturedView: View {
                                     
                                     // MARK: Image + Name
                                     VStack(spacing: 0) {
-                                        Image(model.recipes[index].image)
+                                        
+                                        // Loads the binary data, if nil, then makes it an empty UIImage
+                                        let image = UIImage(data: model.recipes[index].image ?? Data()) ?? UIImage()
+                                        Image(uiImage: image)
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .clipped()

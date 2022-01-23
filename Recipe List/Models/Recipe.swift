@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Recipe: Identifiable, Decodable {
+class RecipeJSON: Identifiable, Decodable {
     
     // Unique ID we assign later
     var id:UUID?
@@ -19,10 +19,11 @@ class Recipe: Identifiable, Decodable {
     var image:String
     var description:String
     var prepTime:String
-    var totalTime:String 
+    var totalTime:String
+    var cookTime: String 
     var servings:Int
     var highlights:[String]
     // Ingredients is an array of Ingredient classes
-    var ingredients:[Ingredient]
+    var ingredients:[IngredientJSON]
     var directions:[String]
 }

@@ -13,7 +13,7 @@ import Foundation
  Identifiable, let's it work in a SwiftUI list and tell each item apart
  Decodable because we parse it directly from the JSON
  */
-class Ingredient: Identifiable, Decodable {
+class IngredientJSON: Identifiable, Decodable {
     
     var id:UUID?
     var name = ""

@@ -17,50 +17,48 @@ class RecipeModel: ObservableObject {
     
     
     static func getPortion(ingredient:Ingredient, recipeServings:Int, targetServings:Int) -> String {
-    
+        
         var portion = ""
-        var numerator = ingredient.num ?? 1 // Nil coalescing operator assigns to 1 if nil
-        var denominator = ingredient.denom ?? 1
+        var numerator = ingredient.num
+        var denominator = ingredient.denom
         var wholePortions = 0
         
         // See if the numerator exists, otherwise, skip the below
-        if ingredient.num != nil {
-            // Get a single serving size by multiplying denominator by the recipe servings
-            denominator *= recipeServings
+        
+        // Get a single serving size by multiplying denominator by the recipe servings
+        denominator *= recipeServings
+        
+        // Get target portion by multiplying numerator by target servings
+        numerator *= targetServings
+        
+        // Reduce fraction by greatest common divisor
+        let divisor = Rational.greatestCommonDivisor(numerator, denominator)
+        numerator /= divisor
+        denominator /= divisor
+        
+        // Get the whole portion if numerator > denominator
+        if numerator >= denominator {
             
-            // Get target portion by multiplying numerator by target servings
-            numerator *= targetServings
+            // Calculated the whole portions
+            wholePortions = numerator / denominator // 5/2 = 2
             
-            // Reduce fraction by greatest common divisor
-            let divisor = Rational.greatestCommonDivisor(numerator, denominator)
-            numerator /= divisor
-            denominator /= divisor
+            // Calculate the remainder
+            numerator = numerator % denominator // 5/2 = 1/2
             
-            // Get the whole portion if numerator > denominator
-            if numerator >= denominator {
-                
-                // Calculated the whole portions
-                wholePortions = numerator / denominator // 5/2 = 2
-                
-                // Calculate the remainder
-                numerator = numerator % denominator // 5/2 = 1/2
-                
-                // Assign to portion string
-                portion += String(wholePortions)
-            }
+            // Assign to portion string
+            portion += String(wholePortions)
+        }
+        
+        // Express the remainder as a fraction
+        if numerator > 0 {
             
-            // Express the remainder as a fraction
-            if numerator > 0 {
-                
-                // Assign remainder as the portion string
-                portion += wholePortions > 0 ? " " : ""
-                portion += "\(numerator)/\(denominator)"
-            }
-            
+            // Assign remainder as the portion string
+            portion += wholePortions > 0 ? " " : ""
+            portion += "\(numerator)/\(denominator)"
         }
         
         
-        if var unit = ingredient.unit {
+         if var unit = ingredient.unit {
             
             var suffix = ""
             

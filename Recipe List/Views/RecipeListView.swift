@@ -9,7 +9,10 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    // MARK: Read the Environment Object
+    
+    // MARK: Read the Environment Objects
+    @Environment(\.managedObjectContext) private var viewContext
+
     @EnvironmentObject var model:RecipeModel
     
     var body: some View {
@@ -36,8 +39,12 @@ struct RecipeListView: View {
                                     label: {
                                         // MARK: Recipe Image & Name
                                         HStack(spacing: 20.0) {
+                                            
+                                            // Use a UIImage to display binary data from Core Data
+                                            let image = UIImage(data: r.image ?? Data()) ?? UIImage()
+                                            
                                             // Clip cuts image outside of frame
-                                            Image(r.image)
+                                            Image(uiImage: image)
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
