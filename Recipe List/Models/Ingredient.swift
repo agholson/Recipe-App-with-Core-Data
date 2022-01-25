@@ -19,7 +19,8 @@ class IngredientJSON: Identifiable, Decodable {
     var name = ""
     // Define these as optionals, because sometimes are here”
     var num:Int?
-    var unit:String?
     var denom:Int?
+    var unit:String?
+    
     
 }

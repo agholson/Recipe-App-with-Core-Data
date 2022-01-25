@@ -20,8 +20,8 @@ extension Ingredient {
     @NSManaged public var name: String
     // Can transform this to Int to work with more easily
     @NSManaged public var num: Int
-    @NSManaged public var unit: String?
     @NSManaged public var denom: Int
+    @NSManaged public var unit: String?
     @NSManaged public var recipe: Recipe?
 
 }

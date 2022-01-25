@@ -46,7 +46,7 @@ let newItem = Item(context: viewContext)
 let newItem = Recipe(context: viewContext)
 ```
 
-Also, change the Persistence Controller name to something resembling your app:
+Also, change the Persistence Controller name to match the name of the Core Data model, e.g. "Recipe Data Model":
 ```
 // Change this
 container = NSPersistentContainer(name: "Test_App")
@@ -67,6 +67,28 @@ Then, add this line in order to get the viewContext needed for Core Data interac
 @Environment(\.managedObjectContext) private var viewContext
 ```
 
+## Pre-Load Core Data
+We can parse the JSON file in our Data directory on the first time launch of the app, then after that use the Core Data store
+for everything else.
+
+You set equal the JSON versions of the objects to the Core Data properties: 
+```
+for r in localRecipes {
+    // Create Recipe Core Data object inside the current managed object context
+    let recipe = Recipe(context: managedObjectContext)
+    
+    // Set this empty Core Data recipe to match the properties from the JSON version
+    recipe.cookTime = r.cookTime
+    recipe.directions = r.directions
+    recipe.featured = r.featured
+    recipe.highlights = r.highlights
+    // Set it equal to a new UUID versus the one from the JSON
+    recipe.id = UUID()
+```
+
+However, for the relationship, you must use the built-in method in order to add it. Therefore, to add the ingredients to the 
+recipe, you use this pre-built method `addToIngredients`. Note that the Recipe has this method, because there are many 
+ingredients to one recipe. A one to many relationship from the other object to it. 
 
 
 # Design

@@ -24,7 +24,7 @@ extension Recipe {
     @NSManaged public var image: Data?
     @NSManaged public var name: String
     @NSManaged public var prepTime: String
-    @NSManaged public var servings: Int64
+    @NSManaged public var servings: Int
     @NSManaged public var summary: String
     @NSManaged public var totalTime: String
     @NSManaged public var cookTime: String
