@@ -69,7 +69,7 @@ class RecipeModel: ObservableObject {
             // Creates a new UUImage based on the passed in name of the image in the assets folder
             // Then returns the binary data from this
             // Okay, if there is no image, because the image property is optional already
-            recipe.image = UIImage(named: r.name)?.jpegData(compressionQuality: 1.0)
+            recipe.image = UIImage(named: r.image)?.jpegData(compressionQuality: 1.0)
             recipe.name = r.name
             recipe.prepTime = r.prepTime
             recipe.servings = r.servings
