@@ -22,6 +22,7 @@
 		41F7964026B5A66000929462 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7963F26B5A66000929462 /* RecipeModel.swift */; };
 		41F7964226B5A7C400929462 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7964126B5A7C400929462 /* DataService.swift */; };
 		7503A18E279E019500D49D2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503A18D279E019500D49D2E /* Constants.swift */; };
+		752314AB27A38861002B3107 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752314AA27A38861002B3107 /* SearchBarView.swift */; };
 		757E62AC279CEFDE00DCA5EE /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62A8279CEFDE00DCA5EE /* Ingredient+CoreDataClass.swift */; };
 		757E62AD279CEFDE00DCA5EE /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62A9279CEFDE00DCA5EE /* Ingredient+CoreDataProperties.swift */; };
 		757E62AE279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62AA279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift */; };
@@ -48,6 +49,7 @@
 		41F7963F26B5A66000929462 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		41F7964126B5A7C400929462 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7503A18D279E019500D49D2E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		752314AA27A38861002B3107 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		757E62A8279CEFDE00DCA5EE /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		757E62A9279CEFDE00DCA5EE /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		757E62AA279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				41F7962926B59D4200929462 /* RecipeListView.swift */,
 				41B5EE3B26B6196A0098B11A /* RecipeDetailView.swift */,
 				41E0609926E901C90028F4EF /* RecipeHighlights.swift */,
+				752314AA27A38861002B3107 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				757E62AC279CEFDE00DCA5EE /* Ingredient+CoreDataClass.swift in Sources */,
 				757E62AD279CEFDE00DCA5EE /* Ingredient+CoreDataProperties.swift in Sources */,
 				41F7962826B59D4200929462 /* Recipe_List_App.swift in Sources */,
+				752314AB27A38861002B3107 /* SearchBarView.swift in Sources */,
 				41CF6A6B26D485BF00CCCC71 /* Rational.swift in Sources */,
 				75F54C07279A56EF00CD14C8 /* Recipe Data Model.xcdatamodeld in Sources */,
 				757E62AF279CEFDE00DCA5EE /* Recipe+CoreDataProperties.swift in Sources */,

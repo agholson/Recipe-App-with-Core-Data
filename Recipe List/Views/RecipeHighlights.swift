@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/**
+ Goes through the recipe highlights, creates a new View for them, and adds a comma in between e.g. Comfort food, Spicy
+ - Parameter highlights: list of highlights defined for the recipe
+ */
 struct RecipeHighlights: View {
     
     var allHighlights = ""
