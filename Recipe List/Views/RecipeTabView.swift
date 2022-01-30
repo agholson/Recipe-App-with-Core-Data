@@ -13,6 +13,7 @@ struct RecipeTabView: View {
         TabView {
             
             // MARK: Featured View
+            // Use a View in order to create a new tab
             RecipeFeaturedView()
                 .tabItem {
                     VStack {
@@ -26,6 +27,13 @@ struct RecipeTabView: View {
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Recipes")
+                }
+            
+            // MARK: Add Recipe View
+            AddRecipeView()
+                .tabItem {
+                    Image(systemName: "plus.circle")
+                    Text("Add")
                 }
             
         }
