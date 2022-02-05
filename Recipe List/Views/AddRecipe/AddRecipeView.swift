@@ -21,6 +21,16 @@ struct AddRecipeView: View {
     @State private var highlights = [String]()
     @State private var directions = [String]()
     
+    // Recipe Image
+    @State private var recipeImage: UIImage? // Optional in case user chooses not to add an image
+    
+    // Track the type of image view user selected
+    // TODO: Replace with PHpicker
+    @State private var selectedImageSource = UIImagePickerController.SourceType.photoLibrary
+    // Image Picker state property used in the .sheet
+    @State private var showImagePicker = false
+    @State private var placeHolderImage = Image("noImageAvailable")
+    
     // Ingredient data
     // Use the JSON version, so we do not automatically create a Core Data object of this
     @State private var ingredients = [IngredientJSON]()
@@ -49,7 +59,38 @@ struct AddRecipeView: View {
             
             
             ScrollView(showsIndicators: false) {
+                
+                
+                
                 VStack {
+                    // Photo for user to upload
+                    placeHolderImage
+                        .resizable()
+                        .scaledToFit()
+                    
+                    // Photo upload controls
+                    HStack {
+                        Button("Photo Library") {
+                            // User taps on photo library, change the image picker showing to true
+                            showImagePicker = true
+                            // TODO: Replace with PHPicker
+                            selectedImageSource =  .photoLibrary
+                        }
+                        
+                        Text("|")
+                        
+                        Button("Camera") {
+                            showImagePicker = true
+                            selectedImageSource = .camera
+                        }
+                        
+                    }
+                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                        // Display the photo library or the camera based on user selection
+                        ImagePicker(selectedSource: selectedImageSource, recipeImage: $recipeImage)
+                    }
+                    
+                    
                     // MARK: - Form input
                     AddMetaData(
                         name: $name,
@@ -74,6 +115,15 @@ struct AddRecipeView: View {
             
         }
         .padding(.horizontal)
+    }
+    
+    /// Used to load the image from the UIKit/ user photo library or camera
+    func loadImage() {
+        // Check if image selected from the library
+        if recipeImage != nil {
+            // Set it to the place holder image from UIKit
+            placeHolderImage = Image(uiImage: recipeImage!)
+        }
     }
     
     /// Clears all of the form data for the recipe

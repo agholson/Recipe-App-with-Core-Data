@@ -29,7 +29,9 @@
 		757E62AE279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62AA279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift */; };
 		757E62AF279CEFDE00DCA5EE /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62AB279CEFDE00DCA5EE /* Recipe+CoreDataProperties.swift */; };
 		757E62D0279D014A00DCA5EE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E62CF279D014A00DCA5EE /* Persistence.swift */; };
+		758DF12D27AE21DA00CF2B73 /* cameraPermissions.png in Resources */ = {isa = PBXBuildFile; fileRef = 758DF12C27AE21DA00CF2B73 /* cameraPermissions.png */; };
 		75AAC8AD27A88E8500F8FDEA /* AddIngredientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AAC8AC27A88E8500F8FDEA /* AddIngredientData.swift */; };
+		75C6DFCE27AA335A004E02C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C6DFCD27AA335A004E02C3 /* ImagePicker.swift */; };
 		75F54C07279A56EF00CD14C8 /* Recipe Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75F54C05279A56EF00CD14C8 /* Recipe Data Model.xcdatamodeld */; };
 		75F73FB327A7186D005BB367 /* AddMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F73FB227A7186D005BB367 /* AddMetaData.swift */; };
 		75F73FB527A71BE8005BB367 /* AddListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F73FB427A71BE8005BB367 /* AddListData.swift */; };
@@ -60,7 +62,9 @@
 		757E62AA279CEFDE00DCA5EE /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		757E62AB279CEFDE00DCA5EE /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		757E62CF279D014A00DCA5EE /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		758DF12C27AE21DA00CF2B73 /* cameraPermissions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraPermissions.png; sourceTree = "<group>"; };
 		75AAC8AC27A88E8500F8FDEA /* AddIngredientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientData.swift; sourceTree = "<group>"; };
+		75C6DFCD27AA335A004E02C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		75F54C04279A52F900CD14C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		75F54C06279A56EF00CD14C8 /* Recipe Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Recipe Data Model.xcdatamodel"; sourceTree = "<group>"; };
 		75F54C09279A59D900CD14C8 /* stringArrayCoreData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stringArrayCoreData.png; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				75F73FB227A7186D005BB367 /* AddMetaData.swift */,
 				75F73FB427A71BE8005BB367 /* AddListData.swift */,
 				75AAC8AC27A88E8500F8FDEA /* AddIngredientData.swift */,
+				75C6DFCD27AA335A004E02C3 /* ImagePicker.swift */,
 			);
 			path = AddRecipe;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 		75F54C08279A59C100CD14C8 /* static */ = {
 			isa = PBXGroup;
 			children = (
+				758DF12C27AE21DA00CF2B73 /* cameraPermissions.png */,
 				75F54C09279A59D900CD14C8 /* stringArrayCoreData.png */,
 			);
 			path = static;
@@ -287,6 +293,7 @@
 				41F7962F26B59D4700929462 /* Preview Assets.xcassets in Resources */,
 				41F7963C26B59F1800929462 /* recipes.json in Resources */,
 				41F7962C26B59D4700929462 /* Assets.xcassets in Resources */,
+				758DF12D27AE21DA00CF2B73 /* cameraPermissions.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +325,7 @@
 				75F54C07279A56EF00CD14C8 /* Recipe Data Model.xcdatamodeld in Sources */,
 				757E62AF279CEFDE00DCA5EE /* Recipe+CoreDataProperties.swift in Sources */,
 				41F7964226B5A7C400929462 /* DataService.swift in Sources */,
+				75C6DFCE27AA335A004E02C3 /* ImagePicker.swift in Sources */,
 				418F7B1226B9F14500625188 /* RecipeTabView.swift in Sources */,
 				7503A18E279E019500D49D2E /* Constants.swift in Sources */,
 			);
