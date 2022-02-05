@@ -28,11 +28,14 @@ struct ImagePicker: UIViewControllerRepresentable {
         // Create IMage picker controller and return it
         let imagePickerController = UIImagePickerController()
         
-        // Set the delegate
+        // Set the delegate that handles what happens once the user selects an image
         imagePickerController.delegate = context.coordinator
         
-        // By default, it goes to the photo library, but we show it here for display, so it can change to camera instead
-        imagePickerController.sourceType = selectedSource
+        // Check if the image source is available
+        if UIImagePickerController.isSourceTypeAvailable(selectedSource) {
+            // By default, it goes to the photo library, but we show it here for display, so it can change to camera instead
+            imagePickerController.sourceType = selectedSource
+        }
         
         // Return the ImagePickerController
         return imagePickerController

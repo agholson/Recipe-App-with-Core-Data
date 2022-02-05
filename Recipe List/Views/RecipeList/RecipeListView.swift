@@ -21,6 +21,7 @@ struct RecipeListView: View {
     @State private var filterBy = ""
     
     // Use a computed property to show the actual recipes
+    // As the filterBy text changes, it changes the recipes shown here 
     private var filteredRecipes: [Recipe] {
         // Check the filtered text without extra space or new lines
         if filterBy.trimmingCharacters(in: .whitespacesAndNewlines) == "" {

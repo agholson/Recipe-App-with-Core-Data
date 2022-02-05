@@ -13,4 +13,9 @@ struct Constants {
     // Create a key for the UserDefaults database to see if the data was already loaded
     // This key holds a boolean value on whether/ not it was already pre-loaded
     static var isDataPreLoaded = "isDataPreLoaded"
+    
+    // Used to control the tab views
+    static var featuredTab = 0
+    static var listTab = 1
+    static var addRecipeTab = 2
 }
