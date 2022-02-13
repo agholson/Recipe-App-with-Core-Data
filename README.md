@@ -97,11 +97,15 @@ ingredients to one recipe. A one to many relationship from the other object to i
 
 ![Video of app](appVideo.mov)
 
+## Searching Recipes
+The `RecipeListView` implements a `SearchBarView`
+![Searching recipe list](img/searchRecipes.png)
+
 ## Adding a Photo
 In order to add a user-selected photo to the app, you must use a UIKit View to accomplish this. 
 
 In addition, in order to use the user's camera we must add a new entry into the `Info.plist` permissions with a new row:
-![Shows permissions in Info.plist](static/cameraPermissions.png)
+![Shows permissions in Info.plist](img/cameraPermissions.png)
 
 # Swift Concepts
 The app incorporates the following concepts:

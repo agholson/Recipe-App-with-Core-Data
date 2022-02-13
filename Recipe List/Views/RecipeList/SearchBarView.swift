@@ -47,6 +47,10 @@ struct SearchBarView: View {
                     Button {
                         // Clear the current text on press
                         filterBy = ""
+                        
+                        // Makes the UI focus again on the search bar
+//                        zoomSearch = true
+                        
                     } label: {
                         Image(systemName: "multiply.circle.fill")
                     
