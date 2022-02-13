@@ -67,6 +67,7 @@
 		75C367C327B8A2EF00E1479F /* searchRecipes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchRecipes.png; sourceTree = "<group>"; };
 		75C367C427B8A35300E1479F /* app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app2.png; path = img/app2.png; sourceTree = SOURCE_ROOT; };
 		75C367C527B8A35300E1479F /* app1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app1.png; path = img/app1.png; sourceTree = SOURCE_ROOT; };
+		75C367CA27B8A52A00E1479F /* AddRecipeView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddRecipeView.png; sourceTree = "<group>"; };
 		75C6DFCD27AA335A004E02C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		75F54C04279A52F900CD14C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		75F54C06279A56EF00CD14C8 /* Recipe Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Recipe Data Model.xcdatamodel"; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 				75C367C527B8A35300E1479F /* app1.png */,
 				75C367C427B8A35300E1479F /* app2.png */,
 				75C367C327B8A2EF00E1479F /* searchRecipes.png */,
+				75C367CA27B8A52A00E1479F /* AddRecipeView.png */,
 				75F54C09279A59D900CD14C8 /* stringArrayCoreData.png */,
 			);
 			path = static;
